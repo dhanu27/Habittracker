@@ -1,0 +1,21 @@
+<section class="weekly">
+    <h1 id="month"></h1> 
+    <% for(progress of details){%>
+       <div class="p"> 
+         <h1><%= progress.habit_id.name%></h1>
+        <div class="progress-continer">
+          <%for(let [key, value] of progress.mymap){%>
+             <div class="block"> 
+              <div class="date">  
+               <%= key%>
+              </div>
+             <div class="status <%= value%>"> 
+               <a  class="statuslink" href="/habits/progress/?id=<%= progress.habit_id._id%>&date=<%= key%>"><%= value%></a>
+              </div> 
+            </div>  
+            <%}%> 
+          </div>
+        </div>     
+        <%}%>
+   </section> 
+<script src="/js/app.js"></script>

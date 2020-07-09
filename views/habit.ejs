@@ -1,0 +1,24 @@
+
+<section class="habits-continer"> 
+     <div class="habits-list">
+       <%if(habits){%>  
+         <% for(habit of habits){%>
+            <div class="habit" id="habit-<%= habit._id%>">
+              <div class="habitName"><%= habit.name%></div>  
+              <div><%= habit.time%></div> 
+              <div><%= habit.status%></div> 
+               <form action="/changestatus/<%= habit._id%>" method="POST">
+                    <input type="date" name="date">
+                   <label for="done">Done</label> 
+                    <input type="radio" name="status" id="done" value="Done">
+                    <label for="NotDone">Not Done</label> 
+                    <input type="radio" name="status" id="NotDone" value="NotDone">
+                   <button type="submit">Action</button> 
+                </form>
+            </div>  
+          <%}%>
+        <%}else{%>
+            <h4>You Not have habits Add Habit</h4>
+            <%}%>  
+     </div>   
+</section>    

@@ -1,0 +1,42 @@
+body{
+    /* background-color: lightslategray; */
+}
+.app-container{
+    width:60%;
+    height:60%;
+    margin:auto;
+    background-color: white;
+}
+.app-container h4{
+    background-color: lightgray;
+    text-align: center;
+}
+.habit{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    border-bottom:2px solid black;
+}
+.habitName{
+ width:40%;
+}
+.progress-continer{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+}
+.block{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    border: 1px solid;
+}
+.block .date{
+   background-color: sienna;
+}
+.Done{
+    background-color: lightgreen;
+}
+.NotDone{
+    background-color: red;
+}

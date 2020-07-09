@@ -1,0 +1,12 @@
+<link rel="stylesheet" href="./css/home.css" type="text/css">
+<div class="app-container">
+    <h4><%= title %></h4>
+
+    <form action="/add" method="POST">
+        <input type="text" name="habit" id="input-habit">
+        <input type="time" name="time">
+        <button type="submit">Habit</button>
+    </form>
+    <a href="/weeklydata" id="weekly">Weekly Details</a>
+    <%- include('habit')-%>
+</div>    
